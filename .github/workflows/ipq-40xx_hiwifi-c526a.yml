@@ -1,6 +1,7 @@
 name: ipq-40xx_hiwifi-c526a
 
 on:
+  workflow_dispatch:
   repository_dispatch:
   release:
     types: published
