@@ -17,22 +17,22 @@ EOF
 
 # 取消默认启用的包
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-ddns is not set
-CONFIG_PACKAGE_luci-app-adbyby-plus is not set
-CONFIG_PACKAGE_luci-app-filetransfer is not set
-CONFIG_PACKAGE_luci-app-vsftpd is not set
-CONFIG_PACKAGE_luci-app-ssr-plus is not set
-CONFIG_PACKAGE_luci-app-unblockmusic is not set
-CONFIG_PACKAGE_luci-app-arpbind is not set
-CONFIG_PACKAGE_luci-app-vlmcsd is not set
-CONFIG_PACKAGE_luci-app-wol is not set
-CONFIG_PACKAGE_luci-app-ramfree is not set
-CONFIG_PACKAGE_luci-app-turboacc is not set
-CONFIG_PACKAGE_luci-app-accesscontrol is not set
-CONFIG_PACKAGE_luci-app-cpufreq is not set
-CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
-CONFIG_PACKAGE_luci-app-zerotier is not set
-CONFIG_PACKAGE_v2ray is not set
+# CONFIG_PACKAGE_luci-app-ddns is not set
+# CONFIG_PACKAGE_luci-app-adbyby-plus is not set
+# CONFIG_PACKAGE_luci-app-filetransfer is not set
+# CONFIG_PACKAGE_luci-app-vsftpd is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus is not set
+# CONFIG_PACKAGE_luci-app-unblockmusic is not set
+# CONFIG_PACKAGE_luci-app-arpbind is not set
+# CONFIG_PACKAGE_luci-app-vlmcsd is not set
+# CONFIG_PACKAGE_luci-app-wol is not set
+# CONFIG_PACKAGE_luci-app-ramfree is not set
+# CONFIG_PACKAGE_luci-app-turboacc is not set
+# CONFIG_PACKAGE_luci-app-accesscontrol is not set
+# CONFIG_PACKAGE_luci-app-cpufreq is not set
+# CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
+# CONFIG_PACKAGE_luci-app-zerotier is not set
+# CONFIG_PACKAGE_v2ray is not set
 # CONFIG_PACKAGE_shadowsocks-libev-ss-redir is not set
 # CONFIG_PACKAGE_shadowsocksr-libev-server is not set
 # CONFIG_PACKAGE_ddns-scripts_aliyun is not set
@@ -61,14 +61,17 @@ CONFIG_PACKAGE_ffprobe=y
 EOF
 
 # 常用软件 默认已启用
-#cat >> .config <<EOF
-#CONFIG_PACKAGE_luci=y
-#CONFIG_PACKAGE_luci-app-upnp=y
-#CONFIG_PACKAGE_luci-app-nlbwmon=y
-#CONFIG_PACKAGE_luci-app-samba=y
-#CONFIG_PACKAGE_autosamba=y
-#CONFIG_PACKAGE_default-settings=y
-#EOF
+cat >> .config <<EOF
+CONFIG_PACKAGE_luci=y
+CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-theme-argon-dark-mod=y
+CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-nps=y
+CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-adbyby-plus=y
+CONFIG_PACKAGE_luci-app-turboacc=y
+EOF
 
 # 其它
 sed -i '21d' package/lean/default-settings/files/zzz-default-settings #禁止网络共享分类到NAS
