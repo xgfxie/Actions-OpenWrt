@@ -61,14 +61,17 @@ CONFIG_PACKAGE_ffprobe=y
 EOF
 
 # 常用软件 默认已启用
-#cat >> .config <<EOF
-#CONFIG_PACKAGE_luci=y
-#CONFIG_PACKAGE_luci-app-upnp=y
-#CONFIG_PACKAGE_luci-app-nlbwmon=y
-#CONFIG_PACKAGE_luci-app-samba=y
-#CONFIG_PACKAGE_autosamba=y
-#CONFIG_PACKAGE_default-settings=y
-#EOF
+cat >> .config <<EOF
+CONFIG_PACKAGE_luci=y
+CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-theme-argon-dark-mod=y
+CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-nps=y
+CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-adbyby-plus=y
+CONFIG_PACKAGE_luci-app-turboacc=y
+EOF
 
 # 其它
 sed -i '21d' package/lean/default-settings/files/zzz-default-settings #禁止网络共享分类到NAS
