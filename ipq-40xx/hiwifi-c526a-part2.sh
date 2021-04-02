@@ -71,6 +71,9 @@ CONFIG_PACKAGE_luci-app-nps=y
 CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-turboacc=y
+CONFIG_PACKAGE_luci-app-pptp-server=y
+CONFIG_PACKAGE_luci-app-rp-pppoe-server=y
+CONFIG_PACKAGE_luci-app-xl2tpd=y
 EOF
 
 # 其它
